@@ -4,7 +4,7 @@
 
 //Import Libraries to help create component.
 import React from 'react';
-import { AppRegistry,Text,View } from 'react-native';
+import { AppRegistry, Text, View } from 'react-native';
 
 //Import Components
 import Header from './src/components/header';
