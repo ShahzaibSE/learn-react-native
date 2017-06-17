@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 
 //Reusable Component 'Card' and 'Card Section'
 import Card from './card';
@@ -7,7 +7,7 @@ import CardSection from './cardSection';
 import Button  from './button';
 
 const AlbumDetail = ({ album }) => {
-    const { title, artist, thumbnail_image, image } = album;
+    const { title, artist, thumbnail_image, image, url } = album;
     const { thumbnailStyle, headerStyleContent, thumbnailContainerStyle, headerStyle, imageStyle } = styles;
     // console.log('Album');
     // console.log(album.thumbnail_image);
@@ -27,7 +27,7 @@ const AlbumDetail = ({ album }) => {
                 <Image style={imageStyle} source={{ uri: image }} />    
               </CardSection>
               <CardSection>
-                  <Button onPress={() => { console.log(title); }} />
+                  <Button onPress={() => { Linking.openURL(url); }}>Buy me</Button>
               </CardSection>
         </Card>
     );
