@@ -5,6 +5,9 @@ import firebase from 'firebase';
 //Common Components.
 import { Header } from './components/common';
 
+//LoginForm Component.
+import LoginForm from './components/LoginForm';
+
 class App extends Component{
 
     //Defining a life cycle method.
@@ -26,7 +29,7 @@ class App extends Component{
         return(
             <View>
                 <Header headerText="Authentication"></Header>
-                <Text>My App!</Text>
+                <LoginForm/>
             </View>
         );
     }
