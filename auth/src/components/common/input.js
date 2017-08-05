@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { TextInput, Text, View } from 'react-native';
 
-const Input = ({ label, value, onChangeText, placeholder }) => {
+const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
     const { inputStyle, labelStyle, containerStyle } = styles;
 
     // console.log(`Label: ${label}`);
@@ -14,7 +14,7 @@ const Input = ({ label, value, onChangeText, placeholder }) => {
     return(
         <View style={containerStyle}>
             <Text style={ labelStyle }>{label}</Text>
-            <TextInput placeholder={placeholder} autoCorrect={false} style={inputStyle} onChangeText={onChangeText} />
+            <TextInput secureTextEntry={secureTextEntry} placeholder={placeholder} autoCorrect={false} style={inputStyle} onChangeText={onChangeText} />
         </View>
     );
 };
