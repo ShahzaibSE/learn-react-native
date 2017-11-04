@@ -18,7 +18,7 @@ import { Card, CardSection, Button, Input } from './common'
                  <CardSection>
                      <Input secureTextEntry label="Password" placeholder="Password" value={this.state.password} onChnageText={passowrd => {this.setState({ password })}} />
                  </CardSection>
-
+                 
                  <CardSection>
                      <Button>Log In</Button>
                  </CardSection>
